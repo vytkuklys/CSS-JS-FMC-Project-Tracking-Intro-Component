@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 100%, 68%);
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+}
+
+/*------header-section-----*/
+header {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.nav {
+    width: 50%;
+    margin-left: auto;
+    height: 29rem;
+    background-color: var(--Light-Grayish-Blue);
+    border-bottom-left-radius: 4rem;
+}
+
+.nav-icons {
+    padding-top: 2.75rem;
+    padding-left: 75%;
+    cursor: pointer;
+}
+
+.icon-close:active, .icon-ham:active{
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+}
+
+.icon-close {
+    display: none;
+}
+
+.header_ul {
+    width: 20.5rem;
+    background-color: white;
+    position: absolute;
+    left: calc(50% - 10.25rem);
+    top: 7.5rem;
+    z-index: 2;
+    list-style: none;
+    padding: 1rem 1.5rem;
+    -webkit-box-shadow: 0px 3px 14px -4px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 5px 13px -4px rgba(0, 0, 0, 0.57);
+    display: none;
+}
+
+.header_li {
+    text-align: center;
+    padding: 0.5rem 0 1rem;
+}
+
+.header_a {
+    text-decoration: none;
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.header_a__color {
+    color: var(--Grayish-Blue);
+}
+
+.header_hr {
+    color: var(--Grayish-Blue);
+    opacity: 0.25;
+    margin-bottom: 0.5rem;
+}
+
+.header-logo {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url(images/logo.svg);
+    background-size: contain;
+    position: absolute;
+    top: 2.5rem;
+    left: 1.25rem;
+    z-index: 1;
+}
+
+.header-illustration {
+    height: 15rem;
+    width: 100%;
+    background: url(images/illustration-devices.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 9.5rem;
+    z-index: 1;
+    white-space: pre;
+}
+
+
+/*-----text-section------*/
+.section-text {
+    margin: 1.25rem 2rem 1.25rem 1.25rem;
+}
+
+.font {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.text__flex {
+    width: 100%;
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.text_h5__bg {
+    padding: 0.1rem 0.5rem 0.125rem;
+    background-color: var(--Very-Dark-Blue);
+    color: var(--Light-Grayish-Blue);
+    border-radius: 1rem;
+    vertical-align: middle;
+}
+
+.text_h5 {
+    text-transform: uppercase;
+    padding-left: 1rem;
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+    letter-spacing: 0.35rem;
+}
+
+.text_h5__spacing {
+    letter-spacing: 0.05rem;
+}
+
+.text_title {
+    font-size: 2.5rem;
+    line-height: 2.25rem;
+    color: var(--Very-Dark-Blue);
+    padding: 0.5rem 0;
+}
+
+.text_p {
+    width: 17.5rem;
+    text-transform: initial;
+    color: var(--Grayish-Blue);
+    padding: 2% 0 4%;
+    font-weight: 400;
+}
+
+.text_button {
+    background-color: red;
+    color: var(--Light-Grayish-Blue);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    letter-spacing: 0.1rem;
+    border-radius: 0.3rem;
+    opacity: 0.65;
+    outline: none;
+    border: none;
+    transition: opacity ease-in-out 250ms;
+    cursor: pointer;
+}
+
+.text_button:hover {
+    opacity: 0.3;
+}
+
+/*--------attributio styling below------*/
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*-----Media queries-----*/
+@media all and (min-width: 500px) {
+    .header-illustration {
+        background-size: contain;
+        left: 20%
+    }
+
+    .header-logo {
+        left: 10%;
+    }
+
+    .section-text {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .text_title {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media all and (min-width: 800px) {
+
+    .icon-ham,
+    .header_hr,
+    .header_ul__show,
+    .nav-icons .icon-close__show {
+        display: none;
+    }
+
+    .nav {
+        height: 26rem;
+    }
+
+    .nav .header_ul {
+        display: flex;
+        position: relative;
+        top: 0.25rem;
+        left: calc(50% - 12rem);
+        background-color: transparent;
+        box-shadow: initial;
+        display: flex;
+        padding: 0;
+    }
+
+    .header_li {
+        padding: 0.25rem 0.75rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .header_ul .header_li_circle {
+        padding: 1.1rem 1rem 0;
+    }
+
+    .header_p_circle {
+        height: 0.4rem;
+        width: 0.4rem;
+        background-color: var(--Grayish-Blue);
+        border-radius: 50%;
+        margin-top: calc(50% - 0.5rem);
+    }
+
+    .header-logo {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    header .header-illustration {
+        height: 25rem;
+        max-height: 25rem;
+        left: 50%;
+        top: 14.5rem;
+    }
+
+    .section-text {
+        width: 40%;
+        margin: -10rem 0 0 10%;
+    }
+
+    .text_p {
+        font-weight: 700;
+        padding: 1.5rem 0 3rem;
+        color: var(--Grayish-Blue);
+    }
+
+    footer .attribution {
+        margin-top: 9rem;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .header_li {
+        padding: 0.25rem 1.15rem;
+    }
+    .text_title {
+        width: 30rem;
+        font-size: 3.4rem;
+        line-height: 3.4rem;
+    }
+}
+
+/*-----JS styles-----*/
+.icon-close__show {
+    display: block;
+}
+
+.icon-ham__hide {
+    display: none;
+}
+
+.header_ul__show {
+    display: block;
+}
+@media all and (min-width: 1300px) {
+    .container{
+        max-width: 1500px;
+    }
+    .text_title{
+        font-size: 3.8rem;
+        line-height: 3.8rem;
+    }
+}
+
+/*-------hover-effects styling below------*/
+
+.header_a {
+    position: relative;
+}
+
+.header_a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0.15rem;
+    left: 50%;
+    position: absolute;
+    background-color: var(--Grayish-Blue);
+    transition: width 300ms ease 0ms, left 300ms ease 0ms;
+    width: 0;
+}
+
+.header_a:hover:after {
+    width: 100%;
+    left: 0;
+}

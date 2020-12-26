@@ -88,10 +88,10 @@ header {
     color: var(--Grayish-Blue);
 }
 
-.header_hr {
-    color: var(--Grayish-Blue);
+.header_li__border{
+    border-top: 1px solid var(--Grayish-Blue);
     opacity: 0.25;
-    margin-bottom: 0.5rem;
+    padding-top: 1rem;
 }
 
 .header-logo {
@@ -225,12 +225,13 @@ header {
 @media all and (min-width: 800px) {
 
     .icon-ham,
-    .header_hr,
     .header_ul__show,
     .nav-icons .icon-close__show {
         display: none;
     }
-
+    .header_li__border{
+        border: none;
+    }
     .nav {
         height: 26rem;
     }
@@ -284,7 +285,6 @@ header {
     .text_p {
         font-weight: 700;
         padding: 1.5rem 0 3rem;
-        color: var(--Grayish-Blue);
     }
 
     footer .attribution {

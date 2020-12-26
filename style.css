@@ -303,18 +303,6 @@ header {
     }
 }
 
-/*-----JS styles-----*/
-.icon-close__show {
-    display: block;
-}
-
-.icon-ham__hide {
-    display: none;
-}
-
-.header_ul__show {
-    display: block;
-}
 @media all and (min-width: 1300px) {
     .container{
         max-width: 1500px;
@@ -347,4 +335,16 @@ header {
 .header_a:hover:after {
     width: 100%;
     left: 0;
+}
+/*-----JS styles-----*/
+.icon-close__show {
+    display: block;
+}
+
+.icon-ham__hide {
+    display: none;
+}
+
+.header_ul__show {
+    display: block;
 }
